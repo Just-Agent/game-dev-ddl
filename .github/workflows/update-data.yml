@@ -19,6 +19,9 @@ jobs:
       - run: npm run crawl
       - run: npm run validate
       - run: npm run link-check
+        env:
+          LINK_CHECK_TIMEOUT_MS: '3500'
+          LINK_CHECK_CONCURRENCY: '12'
       - name: Commit updated data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
