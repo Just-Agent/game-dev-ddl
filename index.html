@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>游戏开发 DDL · Just-DDL Network</title>
+  <meta name="description" content="Game Jam、独立游戏节、学生游戏竞赛、引擎挑战和作品提交截止日">
+  <style>
+    :root {
+      --accent: #9333EA;
+      --ink: #111827;
+      --muted: #5b6472;
+      --line: #dbe3ef;
+      --soft: #f6f8fb;
+      --paper: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f8fbff 0%, #f3f7f5 100%);
+      letter-spacing: 0;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .88);
+      backdrop-filter: blur(16px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav, main, footer { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+    .nav { height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 900; color: var(--ink); text-decoration: none; }
+    .dot { width: 12px; height: 12px; border-radius: 999px; background: var(--accent); box-shadow: 0 0 0 8px color-mix(in srgb, var(--accent) 15%, transparent); }
+    .links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .links a, .button {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 40px; padding: 0 14px; border-radius: 8px;
+      border: 1px solid var(--line); background: #fff; color: var(--ink);
+      font-weight: 800; text-decoration: none;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(320px, .88fr);
+      gap: 28px;
+      padding: 54px 0 28px;
+      align-items: stretch;
+    }
+    .eyebrow { display: inline-flex; gap: 8px; align-items: center; font-size: 14px; font-weight: 900; color: var(--accent); }
+    h1 { font-size: clamp(42px, 7vw, 78px); line-height: .96; margin: 16px 0 18px; letter-spacing: 0; }
+    .lead { font-size: 19px; line-height: 1.72; color: #43506a; max-width: 780px; }
+    .stats {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px;
+    }
+    .stat, .board, .event {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 16px 45px rgba(31, 41, 55, .06);
+    }
+    .stat { padding: 18px; min-height: 92px; }
+    .stat strong { display:block; font-size: 28px; }
+    .stat span { color: var(--muted); font-weight: 700; }
+    .board { padding: 22px; background: linear-gradient(135deg, #ffffff 0%, color-mix(in srgb, var(--accent) 12%, #ffffff) 100%); }
+    .board h2 { margin: 0 0 16px; font-size: 22px; }
+    .source-list { display: grid; gap: 10px; }
+    .source-list a { color: var(--ink); text-decoration: none; font-weight: 800; }
+    .source-line { border: 1px solid var(--line); border-radius: 8px; padding: 12px; background: rgba(255,255,255,.75); }
+    .toolbar { display:flex; justify-content: space-between; align-items:center; gap: 16px; margin: 24px 0 16px; flex-wrap: wrap; }
+    .toolbar h2 { margin: 0; font-size: 28px; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; padding-bottom: 52px; }
+    .event { padding: 18px; min-height: 270px; display:flex; flex-direction: column; gap: 14px; }
+    .event h3 { margin: 0; font-size: 19px; line-height: 1.35; }
+    .meta, .desc { color: var(--muted); line-height: 1.55; }
+    .countdown { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .unit { background: var(--soft); border: 1px solid var(--line); border-radius: 8px; padding: 10px; }
+    .unit strong { display:block; font-size: 22px; }
+    .unit span { color: var(--muted); font-size: 13px; font-weight: 800; }
+    .tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .tag { border-radius: 999px; padding: 6px 10px; background: color-mix(in srgb, var(--accent) 12%, #ffffff); color: #27344b; font-weight: 800; font-size: 12px; }
+    .event a.button { margin-top: auto; background: var(--accent); color: #fff; border-color: transparent; }
+    footer { color: var(--muted); padding: 26px 0 48px; border-top: 1px solid var(--line); }
+    @media (max-width: 920px) {
+      .hero { grid-template-columns: 1fr; padding-top: 36px; }
+      .grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="https://just-agent.github.io/just-ddl/"><span class="dot"></span> JUST-DDL NETWORK</a>
+      <div class="links">
+        <a href="https://just-agent.github.io/just-ddl/">Hub</a>
+        <a href="https://github.com/Just-Agent/game-dev-ddl">GitHub</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">独立专题仓库 · 设计创作</div>
+        <h1>游戏开发</h1>
+        <p class="lead">Game Jam、独立游戏节、学生游戏竞赛、引擎挑战和作品提交截止日。每条事件都显示倒计时，并保留来源入口，方便后续 crawler 自动校验。</p>
+        <div class="stats">
+          <div class="stat"><strong>16</strong><span>活跃条目</span></div>
+          <div class="stat"><strong>4</strong><span>来源族</span></div>
+          <div class="stat"><strong id="nextDays">-</strong><span>下一条</span></div>
+        </div>
+      </div>
+      <aside class="board">
+        <h2>来源看板</h2>
+        <div class="source-list">
+          <div class="source-line"><a href="https://globalgamejam.org">Global Game Jam</a><div class="meta">official · globalGameJamAdapter</div></div>
+          <div class="source-line"><a href="https://itch.io/jams">itch.io Jams</a><div class="meta">official-aggregator · itchIoJamsAdapter</div></div>
+          <div class="source-line"><a href="https://igf.com">Independent Games Festival</a><div class="meta">official · igfAdapter</div></div>
+          <div class="source-line"><a href="https://unity.com">Unity Challenges</a><div class="meta">official · unityAdapter</div></div>
+        </div>
+      </aside>
+    </section>
+    <div class="toolbar">
+      <h2>全部截止日</h2>
+      <div class="meta">按截止时间升序排列 · 数据以来源页面为准</div>
+    </div>
+    <section class="grid" id="events"></section>
+  </main>
+  <footer>游戏开发 DDL is part of Just-DDL Network. Generated as a production-ready topic repository scaffold.</footer>
+  <script>
+    const items = [{"id":"game-dev-ddl-global-game-jam-site-registration-2026-07-01","title":"Global Game Jam Site Registration","deadline":"2026-07-01T23:59:59","dateRange":"Jul 2026","location":"Online","isOnline":true,"tags":["game jam","indie game","Unity"],"url":"https://globalgamejam.org","status":"upcoming","description":"已登记官方或权威聚合来源入口；具体截止时间需以链接页面为准，后续由专题 crawler 抽取并校验。","stage":"Source board","source":"Global Game Jam","type":"contest"},{"id":"game-dev-ddl-ludum-dare-60-2026-07-19","title":"Ludum Dare 60","deadline":"2026-07-19T23:59:59","dateRange":"Jul 2026","location":"Online","isOnline":true,"tags":["game jam","indie game","Unity"],"url":"https://ldjam.com","status":"upcoming","description":"已登记官方或权威聚合来源入口；具体截止时间需以链接页面为准，后续由专题 crawler 抽取并校验。","stage":"Source board","source":"Ludum Dare","type":"contest"},{"id":"game-dev-ddl-gmtk-game-jam-2026-08-06","title":"GMTK Game Jam","deadline":"2026-08-06T23:59:59","dateRange":"Aug 2026","location":"Online","isOnline":true,"tags":["game jam","indie game","Unity"],"url":"https://itch.io/jams","status":"upcoming","description":"已登记官方或权威聚合来源入口；具体截止时间需以链接页面为准，后续由专题 crawler 抽取并校验。","stage":"Source board","source":"itch.io Jams","type":"contest"},{"id":"game-dev-ddl-itch-io-brackeys-game-jam-2026-08-24","title":"itch.io Brackeys Game Jam","deadline":"2026-08-24T23:59:59","dateRange":"Aug 2026","location":"Online","isOnline":true,"tags":["game jam","indie game","Unity"],"url":"https://itch.io/jams","status":"upcoming","description":"已登记官方或权威聚合来源入口；具体截止时间需以链接页面为准，后续由专题 crawler 抽取并校验。","stage":"Source board","source":"itch.io Jams","type":"contest"},{"id":"game-dev-ddl-independent-games-festival-submission-2026-09-11","title":"Independent Games Festival Submission","deadline":"2026-09-11T23:59:59","dateRange":"Sep 2026","location":"Online","isOnline":true,"tags":["game jam","indie game","Unity"],"url":"https://igf.com","status":"upcoming","description":"已登记官方或权威聚合来源入口；具体截止时间需以链接页面为准，后续由专题 crawler 抽取并校验。","stage":"Source board","source":"Independent Games Festival","type":"contest"},{"id":"game-dev-ddl-student-game-competition-entry-2026-09-29","title":"Student Game Competition Entry","deadline":"2026-09-29T23:59:59","dateRange":"Sep 2026","location":"Online","isOnline":true,"tags":["game jam","indie game","Unity"],"url":"https://itch.io/jams","status":"upcoming","description":"已登记官方或权威聚合来源入口；具体截止时间需以链接页面为准，后续由专题 crawler 抽取并校验。","stage":"Source board","source":"itch.io","type":"contest"},{"id":"game-dev-ddl-unreal-engine-challenge-2026-10-17","title":"Unreal Engine Challenge","deadline":"2026-10-17T23:59:59","dateRange":"Oct 2026","location":"Online","isOnline":true,"tags":["game jam","indie game","Unity"],"url":"https://www.unrealengine.com","status":"upcoming","description":"已登记官方或权威聚合来源入口；具体截止时间需以链接页面为准，后续由专题 crawler 抽取并校验。","stage":"Source board","source":"Unreal Engine","type":"contest"},{"id":"game-dev-ddl-unity-student-challenge-2026-11-04","title":"Unity Student Challenge","deadline":"2026-11-04T23:59:59","dateRange":"Nov 2026","location":"Online","isOnline":true,"tags":["game jam","indie game","Unity"],"url":"https://unity.com","status":"upcoming","description":"已登记官方或权威聚合来源入口；具体截止时间需以链接页面为准，后续由专题 crawler 抽取并校验。","stage":"Source board","source":"Unity","type":"contest"},{"id":"game-dev-ddl-godot-wild-jam-2026-11-22","title":"Godot Wild Jam","deadline":"2026-11-22T23:59:59","dateRange":"Nov 2026","location":"Online","isOnline":true,"tags":["game jam","indie game","Unity"],"url":"https://itch.io/jams","status":"upcoming","description":"已登记官方或权威聚合来源入口；具体截止时间需以链接页面为准，后续由专题 crawler 抽取并校验。","stage":"Source board","source":"itch.io Jams","type":"contest"},{"id":"game-dev-ddl-game-off-by-github-2026-12-10","title":"Game Off by GitHub","deadline":"2026-12-10T23:59:59","dateRange":"Dec 2026","location":"Online","isOnline":true,"tags":["game jam","indie game","Unity"],"url":"https://itch.io/jam/game-off","status":"upcoming","description":"已登记官方或权威聚合来源入口；具体截止时间需以链接页面为准，后续由专题 crawler 抽取并校验。","stage":"Source board","source":"GitHub Game Off","type":"contest"},{"id":"game-dev-ddl-a-maze-awards-submission-2026-12-28","title":"A MAZE. Awards Submission","deadline":"2026-12-28T23:59:59","dateRange":"Dec 2026","location":"Online","isOnline":true,"tags":["game jam","indie game","Unity"],"url":"https://amaze-berlin.de","status":"upcoming","description":"已登记官方或权威聚合来源入口；具体截止时间需以链接页面为准，后续由专题 crawler 抽取并校验。","stage":"Source board","source":"A MAZE.","type":"contest"},{"id":"game-dev-ddl-indiecade-submission-2027-01-15","title":"IndieCade Submission","deadline":"2027-01-15T23:59:59","dateRange":"Jan 2027","location":"Online","isOnline":true,"tags":["game jam","indie game","Unity"],"url":"https://www.indiecade.com","status":"upcoming","description":"已登记官方或权威聚合来源入口；具体截止时间需以链接页面为准，后续由专题 crawler 抽取并校验。","stage":"Source board","source":"IndieCade","type":"contest"},{"id":"game-dev-ddl-games-for-change-awards-2027-02-02","title":"Games for Change Awards","deadline":"2027-02-02T23:59:59","dateRange":"Feb 2027","location":"Online","isOnline":true,"tags":["game jam","indie game","Unity"],"url":"https://www.gamesforchange.org","status":"upcoming","description":"已登记官方或权威聚合来源入口；具体截止时间需以链接页面为准，后续由专题 crawler 抽取并校验。","stage":"Source board","source":"Games for Change","type":"contest"},{"id":"game-dev-ddl-ai-npc-challenge-2027-02-20","title":"AI NPC Challenge","deadline":"2027-02-20T23:59:59","dateRange":"Feb 2027","location":"Online","isOnline":true,"tags":["game jam","indie game","Unity"],"url":"https://itch.io/jams","status":"upcoming","description":"已登记官方或权威聚合来源入口；具体截止时间需以链接页面为准，后续由专题 crawler 抽取并校验。","stage":"Source board","source":"itch.io","type":"contest"},{"id":"game-dev-ddl-procedural-generation-jam-2027-03-10","title":"Procedural Generation Jam","deadline":"2027-03-10T23:59:59","dateRange":"Mar 2027","location":"Online","isOnline":true,"tags":["game jam","indie game","Unity"],"url":"https://itch.io/jams","status":"upcoming","description":"已登记官方或权威聚合来源入口；具体截止时间需以链接页面为准，后续由专题 crawler 抽取并校验。","stage":"Source board","source":"itch.io","type":"contest"},{"id":"game-dev-ddl-serious-games-health-track-2027-03-28","title":"Serious Games Health Track","deadline":"2027-03-28T23:59:59","dateRange":"Mar 2027","location":"Online","isOnline":true,"tags":["game jam","indie game","Unity"],"url":"https://itch.io/jams","status":"upcoming","description":"已登记官方或权威聚合来源入口；具体截止时间需以链接页面为准，后续由专题 crawler 抽取并校验。","stage":"Source board","source":"itch.io","type":"contest"}];
+    const formatter = new Intl.DateTimeFormat('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit' });
+    const sorted = [...items].sort((a, b) => new Date(a.deadline) - new Date(b.deadline));
+    function diffParts(deadline) {
+      const ms = new Date(deadline) - new Date();
+      const positive = Math.max(0, ms);
+      const days = Math.floor(positive / 86400000);
+      const hours = Math.floor((positive % 86400000) / 3600000);
+      const minutes = Math.floor((positive % 3600000) / 60000);
+      return { days, hours, minutes, ended: ms < 0 };
+    }
+    function render() {
+      const root = document.getElementById('events');
+      const htmlEscape = value => String(value || '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+      root.innerHTML = sorted.map(item => {
+        const diff = diffParts(item.deadline);
+        const tags = (item.tags || []).map(tag => '<span class="tag">' + htmlEscape(tag) + '</span>').join('');
+        return '<article class="event">' +
+          '<div class="meta">' + htmlEscape(item.stage || 'Deadline') + ' · ' + formatter.format(new Date(item.deadline)) + '</div>' +
+          '<h3>' + htmlEscape(item.title) + '</h3>' +
+          '<div class="countdown">' +
+            '<div class="unit"><strong>' + diff.days + '</strong><span>天</span></div>' +
+            '<div class="unit"><strong>' + diff.hours + '</strong><span>小时</span></div>' +
+            '<div class="unit"><strong>' + diff.minutes + '</strong><span>分钟</span></div>' +
+          '</div>' +
+          '<div class="desc">' + htmlEscape(item.description || '') + '</div>' +
+          '<div class="tags">' + tags + '</div>' +
+          '<div class="meta">来源：' + htmlEscape(item.source || 'source page') + '</div>' +
+          '<a class="button" href="' + htmlEscape(encodeURI(item.url)) + '">查看来源</a>' +
+        '</article>';
+      }).join('');
+      const next = sorted.find(item => new Date(item.deadline) >= new Date()) || sorted[0];
+      if (next) document.getElementById('nextDays').textContent = diffParts(next.deadline).days + ' 天后';
+    }
+    render();
+    setInterval(render, 60000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+{
+  "topicId": "game-dev-ddl",
+  "generatedAt": "2026-05-15T18:03:01.939Z",
+  "sourcePolicy": "Chinese-first display. Dates are preserved from the hub dataset; crawlers must verify against official pages before strict mode.",
+  "sourceFamilies": [
+    {
+      "id": "global-game-jam",
+      "name": "Global Game Jam",
+      "url": "https://globalgamejam.org",
+      "adapter": "globalGameJamAdapter",
+      "confidence": "official"
+    },
+    {
+      "id": "itchio",
+      "name": "itch.io Jams",
+      "url": "https://itch.io/jams",
+      "adapter": "itchIoJamsAdapter",
+      "confidence": "official-aggregator"
+    },
+    {
+      "id": "igf",
+      "name": "Independent Games Festival",
+      "url": "https://igf.com",
+      "adapter": "igfAdapter",
+      "confidence": "official"
+    },
+    {
+      "id": "unity",
+      "name": "Unity Challenges",
+      "url": "https://unity.com",
+      "adapter": "unityAdapter",
+      "confidence": "official"
+    }
+  ],
+  "itemSources": [
+    {
+      "name": "Global Game Jam",
+      "url": "https://globalgamejam.org",
+      "type": "item-source",
+      "confidence": "official-or-official-entry",
+      "note": "来自当前 Just-DDL 数据项；具体日期仍以链接页面为准。"
+    },
+    {
+      "name": "Ludum Dare",
+      "url": "https://ldjam.com",
+      "type": "item-source",
+      "confidence": "official-or-official-entry",
+      "note": "来自当前 Just-DDL 数据项；具体日期仍以链接页面为准。"
+    },
+    {
+      "name": "itch.io Jams",
+      "url": "https://itch.io/jams",
+      "type": "item-source",
+      "confidence": "official-or-official-entry",
+      "note": "来自当前 Just-DDL 数据项；具体日期仍以链接页面为准。"
+    },
+    {
+      "name": "Independent Games Festival",
+      "url": "https://igf.com",
+      "type": "item-source",
+      "confidence": "official-or-official-entry",
+      "note": "来自当前 Just-DDL 数据项；具体日期仍以链接页面为准。"
+    },
+    {
+      "name": "itch.io",
+      "url": "https://itch.io/jams",
+      "type": "item-source",
+      "confidence": "official-or-official-entry",
+      "note": "来自当前 Just-DDL 数据项；具体日期仍以链接页面为准。"
+    },
+    {
+      "name": "Unreal Engine",
+      "url": "https://www.unrealengine.com",
+      "type": "item-source",
+      "confidence": "official-or-official-entry",
+      "note": "来自当前 Just-DDL 数据项；具体日期仍以链接页面为准。"
+    },
+    {
+      "name": "Unity",
+      "url": "https://unity.com",
+      "type": "item-source",
+      "confidence": "official-or-official-entry",
+      "note": "来自当前 Just-DDL 数据项；具体日期仍以链接页面为准。"
+    },
+    {
+      "name": "GitHub Game Off",
+      "url": "https://itch.io/jam/game-off",
+      "type": "item-source",
+      "confidence": "official-or-official-entry",
+      "note": "来自当前 Just-DDL 数据项；具体日期仍以链接页面为准。"
+    },
+    {
+      "name": "A MAZE.",
+      "url": "https://amaze-berlin.de",
+      "type": "item-source",
+      "confidence": "official-or-official-entry",
+      "note": "来自当前 Just-DDL 数据项；具体日期仍以链接页面为准。"
+    },
+    {
+      "name": "IndieCade",
+      "url": "https://www.indiecade.com",
+      "type": "item-source",
+      "confidence": "official-or-official-entry",
+      "note": "来自当前 Just-DDL 数据项；具体日期仍以链接页面为准。"
+    },
+    {
+      "name": "Games for Change",
+      "url": "https://www.gamesforchange.org",
+      "type": "item-source",
+      "confidence": "official-or-official-entry",
+      "note": "来自当前 Just-DDL 数据项；具体日期仍以链接页面为准。"
+    }
+  ]
+}
