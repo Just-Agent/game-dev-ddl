@@ -1,6 +1,6 @@
 {
   "topicId": "game-dev-ddl",
-  "generatedAt": "2026-05-16T01:09:31.290Z",
+  "generatedAt": "2026-05-16T01:13:57.232Z",
   "adapterCount": 4,
   "reachableCount": 3,
   "parsedItemCount": 9,
@@ -17,8 +17,8 @@
       "httpStatus": 403,
       "finalUrl": "https://globalgamejam.org/",
       "title": "Attention Required! | Cloudflare",
-      "contentLength": 5774,
-      "fetchedAt": "2026-05-16T01:09:08.596Z",
+      "contentLength": 5750,
+      "fetchedAt": "2026-05-16T01:13:48.695Z",
       "note": "Source returned HTTP 403. Curated data/items.json preserved.",
       "error": null
     },
@@ -167,8 +167,8 @@
       "httpStatus": 200,
       "finalUrl": "https://itch.io/jams",
       "title": "Game jams - itch.io",
-      "contentLength": 207355,
-      "fetchedAt": "2026-05-16T01:09:09.266Z",
+      "contentLength": 207353,
+      "fetchedAt": "2026-05-16T01:13:48.947Z",
       "note": "Parsed 9 jam items from itch.io/jams; rejected 445 invalid/no-date entries.",
       "error": null,
       "parsedItemCount": 9,
@@ -184,8 +184,8 @@
       "httpStatus": 200,
       "finalUrl": "https://igf.com/",
       "title": "Independent Games Festival",
-      "contentLength": 791524,
-      "fetchedAt": "2026-05-16T01:09:20.697Z",
+      "contentLength": 791523,
+      "fetchedAt": "2026-05-16T01:13:49.061Z",
       "note": "Source reachable. Curated data/items.json preserved until item parser is implemented.",
       "error": null
     },
@@ -198,8 +198,8 @@
       "httpStatus": 200,
       "finalUrl": "https://unity.com/",
       "title": "Unity: Develop, Deploy, and Grow | The World&#x27;s Leading Game Engine",
-      "contentLength": 436798,
-      "fetchedAt": "2026-05-16T01:09:21.339Z",
+      "contentLength": 436799,
+      "fetchedAt": "2026-05-16T01:13:49.134Z",
       "note": "Source reachable. Curated data/items.json preserved until item parser is implemented.",
       "error": null
     }
