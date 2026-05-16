@@ -12,18 +12,18 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
-          node-version: '22'
-      - run: npm run crawl
-      - run: npm run validate
-      - run: npm run link-check
+          node-version: '24'
+      - run: node scripts/crawl-sources.mjs
+      - run: node scripts/validate-data.mjs
+      - run: node scripts/link-check.mjs
         env:
           LINK_CHECK_TIMEOUT_MS: '3500'
           LINK_CHECK_CONCURRENCY: '12'
       - name: Commit updated data
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: 'data: update ddl crawl results'
           file_pattern: 'data/*.json'
