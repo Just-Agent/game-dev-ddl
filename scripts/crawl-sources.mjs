@@ -289,9 +289,26 @@ const harvestedItems = reports.flatMap(report => report.items);
 const parsedItemCount = reports.reduce((s, r) => s + (r.parsedItemCount || 0), 0);
 const parserHealthy = reports.every(r => r.parserHealthy !== false);
 const parserDropOk = previousParsedItemCount === null || parsedItemCount >= Math.floor(previousParsedItemCount * 0.5);
+
+function mergeFetchedWithExisting(fetchedItems, currentItems) {
+  const merged = new Map();
+  for (const item of currentItems) {
+    if (item?.id) merged.set(item.id, item);
+  }
+  for (const item of fetchedItems) {
+    if (item?.id) merged.set(item.id, item);
+  }
+  return [...merged.values()].sort((a, b) => {
+    const dateDiff = Date.parse(a.deadline) - Date.parse(b.deadline);
+    if (dateDiff !== 0) return dateDiff;
+    return String(a.title || '').localeCompare(String(b.title || ''), 'zh-CN');
+  });
+}
+
 if (harvestedItems.length >= ITCHIO_MIN_ITEMS && parserHealthy && parserDropOk) {
-  fs.writeFileSync(existingItemsUrl, JSON.stringify(harvestedItems, null, 2) + '\n', 'utf8');
-  console.log('crawler wrote ' + harvestedItems.length + ' fetched items');
+  const mergedItems = mergeFetchedWithExisting(harvestedItems, existingItems);
+  fs.writeFileSync(existingItemsUrl, JSON.stringify(mergedItems, null, 2) + '\n', 'utf8');
+  console.log('crawler wrote ' + harvestedItems.length + ' fetched items; preserved/merged total ' + mergedItems.length + ' items');
 } else {
   console.log('parser emitted ' + harvestedItems.length + ' items (health gate failed or threshold not met); preserving ' + existingItems.length + ' curated items in data/items.json');
 }
