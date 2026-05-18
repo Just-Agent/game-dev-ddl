@@ -1,6 +1,6 @@
 {
   "topicId": "game-dev-ddl",
-  "generatedAt": "2026-05-16T10:29:56.372Z",
+  "generatedAt": "2026-05-18T06:35:23.263Z",
   "adapterCount": 4,
   "reachableCount": 2,
   "parsedItemCount": 9,
@@ -17,8 +17,8 @@
       "httpStatus": 403,
       "finalUrl": "https://globalgamejam.org/",
       "title": "Attention Required! | Cloudflare",
-      "contentLength": 5751,
-      "fetchedAt": "2026-05-16T10:29:49.316Z",
+      "contentLength": 5752,
+      "fetchedAt": "2026-05-18T06:35:16.211Z",
       "note": "Source returned HTTP 403. Curated data/items.json preserved.",
       "error": null
     },
@@ -38,6 +38,21 @@
           "url": "https://itch.io/jam/metroidvania-month-32",
           "status": "upcoming",
           "description": "Parsed from itch.io/jams. Deadline is the jam end time.",
+          "stage": "upcoming",
+          "source": "itch.io Jams",
+          "type": "contest"
+        },
+        {
+          "id": "itchio-jam-noise-jam-3",
+          "title": "NOISE JAM 3",
+          "deadline": "2026-06-13T08:00:00Z",
+          "deadlineType": "end-computed",
+          "tags": [
+            "game jam"
+          ],
+          "url": "https://itch.io/jam/noise-jam-3",
+          "status": "upcoming",
+          "description": "Parsed from itch.io/jams. Deadline is computed from the listed start time plus jam duration.",
           "stage": "upcoming",
           "source": "itch.io Jams",
           "type": "contest"
@@ -68,21 +83,6 @@
           "url": "https://itch.io/jam/coolmath-game-jam-2026",
           "status": "upcoming",
           "description": "Parsed from itch.io/jams. Deadline is the jam end time.",
-          "stage": "upcoming",
-          "source": "itch.io Jams",
-          "type": "contest"
-        },
-        {
-          "id": "itchio-jam-noise-jam-3",
-          "title": "NOISE JAM 3",
-          "deadline": "2026-06-13T08:00:00Z",
-          "deadlineType": "end-computed",
-          "tags": [
-            "game jam"
-          ],
-          "url": "https://itch.io/jam/noise-jam-3",
-          "status": "upcoming",
-          "description": "Parsed from itch.io/jams. Deadline is computed from the listed start time plus jam duration.",
           "stage": "upcoming",
           "source": "itch.io Jams",
           "type": "contest"
@@ -167,12 +167,12 @@
       "httpStatus": 200,
       "finalUrl": "https://itch.io/jams",
       "title": "Game jams - itch.io",
-      "contentLength": 205068,
-      "fetchedAt": "2026-05-16T10:29:49.368Z",
-      "note": "Parsed 9 jam items from itch.io/jams; rejected 440 invalid/no-date entries.",
+      "contentLength": 197936,
+      "fetchedAt": "2026-05-18T06:35:16.258Z",
+      "note": "Parsed 9 jam items from itch.io/jams; rejected 422 invalid/no-date entries.",
       "error": null,
       "parsedItemCount": 9,
-      "invalidItemCount": 440,
+      "invalidItemCount": 422,
       "parserHealthy": true
     },
     {
@@ -184,8 +184,8 @@
       "httpStatus": 200,
       "finalUrl": "https://igf.com/",
       "title": "Independent Games Festival",
-      "contentLength": 791524,
-      "fetchedAt": "2026-05-16T10:29:49.369Z",
+      "contentLength": 791523,
+      "fetchedAt": "2026-05-18T06:35:16.259Z",
       "note": "Source reachable. Curated data/items.json preserved until item parser is implemented.",
       "error": null
     },
@@ -199,7 +199,7 @@
       "finalUrl": null,
       "title": null,
       "contentLength": null,
-      "fetchedAt": "2026-05-16T10:29:49.370Z",
+      "fetchedAt": "2026-05-18T06:35:16.260Z",
       "note": "Source fetch failed: Timeout after 7000ms. Curated data/items.json preserved.",
       "error": "Timeout after 7000ms"
     }
