@@ -1,9 +1,9 @@
 {
   "topicId": "game-dev-ddl",
-  "generatedAt": "2026-05-18T06:35:23.263Z",
+  "generatedAt": "2026-05-25T06:49:07.441Z",
   "adapterCount": 4,
   "reachableCount": 2,
-  "parsedItemCount": 9,
+  "parsedItemCount": 8,
   "previousParsedItemCount": 9,
   "parserHealthy": true,
   "parserDropOk": true,
@@ -17,8 +17,8 @@
       "httpStatus": 403,
       "finalUrl": "https://globalgamejam.org/",
       "title": "Attention Required! | Cloudflare",
-      "contentLength": 5752,
-      "fetchedAt": "2026-05-18T06:35:16.211Z",
+      "contentLength": 5753,
+      "fetchedAt": "2026-05-25T06:49:00.394Z",
       "note": "Source returned HTTP 403. Curated data/items.json preserved.",
       "error": null
     },
@@ -27,36 +27,6 @@
       "source": "itch.io Jams",
       "url": "https://itch.io/jams",
       "items": [
-        {
-          "id": "itchio-jam-metroidvania-month-32",
-          "title": "Metroidvania Month 32",
-          "deadline": "2026-06-16T02:00:00Z",
-          "deadlineType": "end",
-          "tags": [
-            "game jam"
-          ],
-          "url": "https://itch.io/jam/metroidvania-month-32",
-          "status": "upcoming",
-          "description": "Parsed from itch.io/jams. Deadline is the jam end time.",
-          "stage": "upcoming",
-          "source": "itch.io Jams",
-          "type": "contest"
-        },
-        {
-          "id": "itchio-jam-noise-jam-3",
-          "title": "NOISE JAM 3",
-          "deadline": "2026-06-13T08:00:00Z",
-          "deadlineType": "end-computed",
-          "tags": [
-            "game jam"
-          ],
-          "url": "https://itch.io/jam/noise-jam-3",
-          "status": "upcoming",
-          "description": "Parsed from itch.io/jams. Deadline is computed from the listed start time plus jam duration.",
-          "stage": "upcoming",
-          "source": "itch.io Jams",
-          "type": "contest"
-        },
         {
           "id": "itchio-jam-brackeys-16",
           "title": "Brackeys Game Jam 2026.2",
@@ -73,29 +43,29 @@
           "type": "contest"
         },
         {
-          "id": "itchio-jam-coolmath-game-jam-2026",
-          "title": "The $20K Coolmath Game Jam 2026",
-          "deadline": "2026-06-08T06:59:59Z",
-          "deadlineType": "end",
+          "id": "itchio-jam-gmtk-jam-2026",
+          "title": "GMTK Game Jam 2026",
+          "deadline": "2026-07-26T17:00:00Z",
+          "deadlineType": "end-computed",
           "tags": [
             "game jam"
           ],
-          "url": "https://itch.io/jam/coolmath-game-jam-2026",
+          "url": "https://itch.io/jam/gmtk-jam-2026",
           "status": "upcoming",
-          "description": "Parsed from itch.io/jams. Deadline is the jam end time.",
+          "description": "Parsed from itch.io/jams. Deadline is computed from the listed start time plus jam duration.",
           "stage": "upcoming",
           "source": "itch.io Jams",
           "type": "contest"
         },
         {
-          "id": "itchio-jam-gdevelop-big-game-jam-9",
-          "title": "GDevelop BIG Game Jam #9",
-          "deadline": "2026-05-24T19:00:00Z",
+          "id": "itchio-jam-metroidvania-month-32",
+          "title": "Metroidvania Month 32",
+          "deadline": "2026-06-16T02:00:00Z",
           "deadlineType": "end",
           "tags": [
             "game jam"
           ],
-          "url": "https://itch.io/jam/gdevelop-big-game-jam-9",
+          "url": "https://itch.io/jam/metroidvania-month-32",
           "status": "upcoming",
           "description": "Parsed from itch.io/jams. Deadline is the jam end time.",
           "stage": "upcoming",
@@ -118,14 +88,14 @@
           "type": "contest"
         },
         {
-          "id": "itchio-jam-gbjam-14",
-          "title": "GBJam 14",
-          "deadline": "2026-09-21T11:00:00Z",
+          "id": "itchio-jam-nes-jam-2026",
+          "title": "NES Jam 2026",
+          "deadline": "2026-06-15T11:00:00Z",
           "deadlineType": "end-computed",
           "tags": [
             "game jam"
           ],
-          "url": "https://itch.io/jam/gbjam-14",
+          "url": "https://itch.io/jam/nes-jam-2026",
           "status": "upcoming",
           "description": "Parsed from itch.io/jams. Deadline is computed from the listed start time plus jam duration.",
           "stage": "upcoming",
@@ -148,14 +118,29 @@
           "type": "contest"
         },
         {
-          "id": "itchio-jam-nes-jam-2026",
-          "title": "NES Jam 2026",
-          "deadline": "2026-06-15T11:00:00Z",
+          "id": "itchio-jam-noise-jam-3",
+          "title": "NOISE JAM 3",
+          "deadline": "2026-06-13T08:00:00Z",
+          "deadlineType": "end",
+          "tags": [
+            "game jam"
+          ],
+          "url": "https://itch.io/jam/noise-jam-3",
+          "status": "upcoming",
+          "description": "Parsed from itch.io/jams. Deadline is the jam end time.",
+          "stage": "upcoming",
+          "source": "itch.io Jams",
+          "type": "contest"
+        },
+        {
+          "id": "itchio-jam-gbjam-14",
+          "title": "GBJam 14",
+          "deadline": "2026-09-21T11:00:00Z",
           "deadlineType": "end-computed",
           "tags": [
             "game jam"
           ],
-          "url": "https://itch.io/jam/nes-jam-2026",
+          "url": "https://itch.io/jam/gbjam-14",
           "status": "upcoming",
           "description": "Parsed from itch.io/jams. Deadline is computed from the listed start time plus jam duration.",
           "stage": "upcoming",
@@ -167,12 +152,12 @@
       "httpStatus": 200,
       "finalUrl": "https://itch.io/jams",
       "title": "Game jams - itch.io",
-      "contentLength": 197936,
-      "fetchedAt": "2026-05-18T06:35:16.258Z",
-      "note": "Parsed 9 jam items from itch.io/jams; rejected 422 invalid/no-date entries.",
+      "contentLength": 203590,
+      "fetchedAt": "2026-05-25T06:49:00.437Z",
+      "note": "Parsed 8 jam items from itch.io/jams; rejected 441 invalid/no-date entries.",
       "error": null,
-      "parsedItemCount": 9,
-      "invalidItemCount": 422,
+      "parsedItemCount": 8,
+      "invalidItemCount": 441,
       "parserHealthy": true
     },
     {
@@ -184,8 +169,8 @@
       "httpStatus": 200,
       "finalUrl": "https://igf.com/",
       "title": "Independent Games Festival",
-      "contentLength": 791523,
-      "fetchedAt": "2026-05-18T06:35:16.259Z",
+      "contentLength": 797554,
+      "fetchedAt": "2026-05-25T06:49:00.438Z",
       "note": "Source reachable. Curated data/items.json preserved until item parser is implemented.",
       "error": null
     },
@@ -199,7 +184,7 @@
       "finalUrl": null,
       "title": null,
       "contentLength": null,
-      "fetchedAt": "2026-05-18T06:35:16.260Z",
+      "fetchedAt": "2026-05-25T06:49:00.439Z",
       "note": "Source fetch failed: Timeout after 7000ms. Curated data/items.json preserved.",
       "error": "Timeout after 7000ms"
     }
